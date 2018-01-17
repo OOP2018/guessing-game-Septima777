@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
 		int upperBound = 100;
-		NumberGame game = new MyGuessGame(upperBound);
+		NumberGame game = new Game(upperBound);
 		GameSolver ui = new GameSolver( );
 		int solution = ui.play( game );
 		System.out.println(game.getMessage());

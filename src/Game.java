@@ -5,10 +5,10 @@ import java.util.Random;
  * @author Noppawan Kulchol
  *
  */
-public class MyGuessGame extends NumberGame {
+public class Game extends NumberGame {
 	private int upperBound;
 	private int secret;
-	private int count;
+	private int count = 0;
 
 	/**
 	 * Initialize a new game
@@ -16,7 +16,7 @@ public class MyGuessGame extends NumberGame {
 	 * @param upperBound
 	 *            is the max value of this game (secret number)
 	 */
-	public MyGuessGame(int upperBound) {
+	public Game(int upperBound) {
 		this.upperBound = upperBound;
 		long seed = System.nanoTime();
 		Random rand = new Random(seed);
@@ -31,7 +31,7 @@ public class MyGuessGame extends NumberGame {
 	 */
 	@Override
 	public boolean guess(int number) {
-		this.count++;
+		this.count ++;
 		if (number == secret) {
 			setMessage("Right! The secret number is " + this.secret);
 			return true;
@@ -47,12 +47,14 @@ public class MyGuessGame extends NumberGame {
 	 * Return the upperbound of this game.
 	 * @return the upperbound of this game.
 	 */
-	public int getUpperbound() {
+	public int getUpperBound() {
 		return this.upperBound;
 	}
+	
 
 	/**
 	 * print description of this game before start the game.
+	 * @return the description of this game before start the game.
 	 */
 	public String toString() {
 		return "Guess a secret number.";
@@ -60,6 +62,7 @@ public class MyGuessGame extends NumberGame {
 
 	/**
 	 * get the number of random.
+	 * @return the number of random.
 	 */
 	public int getCount() {
 		return this.count;

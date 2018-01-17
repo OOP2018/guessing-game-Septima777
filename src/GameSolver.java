@@ -4,26 +4,26 @@
  *
  */
 public class GameSolver {
-	public int play(NumberGame game){
-		System.out.println( game.toString() );		
-		System.out.println( game.getMessage() );		
-		System.out.print("Your answer? ");		
-		int guess = game.getUpperBound()/2;
-		int constant = guess;
-		int branch = 2;
-		boolean correct = game.guess(guess);
-		while(!correct){
-			System.out.println(game.getMessage());
+	public int play(NumberGame numberGame){
+		System.out.println( numberGame.toString() );		
+		System.out.println( numberGame.getMessage() );		
+		System.out.print("Your answer? ");
+		int guess = numberGame.getUpperBound()/2;
+		int min = 1;
+		int max = numberGame.getUpperBound();
+		while(!numberGame.guess(guess)){
+			System.out.println(numberGame.getMessage());
+
 			System.out.print("Your answer? ");
-			if(game.getMessage().contains("Sorry, too large.")){
-				guess = guess - constant/branch;
-			}if(game.getMessage().contains("Sorry, too small.")){
-				guess = guess + constant/branch;
+			if(numberGame.getMessage().contains("large")){
+				max = guess - 1;
+				guess = min + (max - min)/2;
+			}if(numberGame.getMessage().contains("small")){
+				min = guess + 1;
+				guess = min + (max - min)/2;
 			}
-			if(constant/branch>1){
-				branch = branch*2;
-			}
-			correct = game.guess(guess);
+			
+
 		}
 		return guess;
 	
