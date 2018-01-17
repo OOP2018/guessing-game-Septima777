@@ -8,9 +8,9 @@ public class GameSolver {
 		System.out.println( numberGame.toString() );		
 		System.out.println( numberGame.getMessage() );		
 		System.out.print("Your answer? ");
-		int guess = numberGame.getUpperBound()/2;
 		int min = 1;
 		int max = numberGame.getUpperBound();
+		int guess = min + (max - min)/2;
 		while(!numberGame.guess(guess)){
 			System.out.println(numberGame.getMessage());
 
