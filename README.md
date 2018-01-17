@@ -7,4 +7,3 @@ The instructions are See instructions are in [week1/Lab1-Guessing-Game.pdf](http
 
 ### Noppawan Kulchol
 ### 5910545728
-Game that play by user have to guess the number equals to the secret number.
