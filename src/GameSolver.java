@@ -15,10 +15,10 @@ public class GameSolver {
 			System.out.println(numberGame.getMessage());
 
 			System.out.print("Your answer? ");
-			if(numberGame.getMessage().contains("large")){
+			if(numberGame.getMessage().contains("too large")){
 				max = guess - 1;
 				guess = min + (max - min)/2;
-			}if(numberGame.getMessage().contains("small")){
+			}if(numberGame.getMessage().contains("too small")){
 				min = guess + 1;
 				guess = min + (max - min)/2;
 			}
