@@ -5,16 +5,12 @@
  */
 public class GameSolver {
 	public int play(NumberGame numberGame){
-		System.out.println( numberGame.toString() );		
-		System.out.println( numberGame.getMessage() );		
-		System.out.print("Your answer? ");
+		
 		int min = 1;
 		int max = numberGame.getUpperBound();
 		int guess = min + (max - min)/2;
 		while(!numberGame.guess(guess)){
-			System.out.println(numberGame.getMessage());
-
-			System.out.print("Your answer? ");
+			
 			if(numberGame.getMessage().contains("too large")){
 				max = guess - 1;
 				guess = min + (max - min)/2;

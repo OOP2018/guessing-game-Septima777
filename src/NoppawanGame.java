@@ -5,7 +5,7 @@ import java.util.Random;
  * @author Noppawan Kulchol
  *
  */
-public class Game extends NumberGame {
+public class NoppawanGame extends NumberGame {
 	private int upperBound;
 	private int secret;
 	private int count = 0;
@@ -16,7 +16,7 @@ public class Game extends NumberGame {
 	 * @param upperBound
 	 *            is the max value of this game (secret number)
 	 */
-	public Game(int upperBound) {
+	public NoppawanGame(int upperBound) {
 		this.upperBound = upperBound;
 		long seed = System.nanoTime();
 		Random rand = new Random(seed);
