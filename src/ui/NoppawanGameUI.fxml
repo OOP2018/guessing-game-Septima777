@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.NoppawanGameController">
+   <children>
+      <Label layoutX="35.0" layoutY="14.0" text="Welcome to the Guessing Game!">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="hintArea" alignment="CENTER" layoutX="37.0" layoutY="63.0" prefHeight="18.0" prefWidth="326.0" text="hint here" textFill="#df4a4a" />
+      <Label layoutX="29.0" layoutY="98.0" text="What is the secret number?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answer" layoutX="217.0" layoutY="96.0" onAction="#guessHandle" prefHeight="26.0" prefWidth="140.0" />
+      <Button fx:id="guessButton" layoutX="93.0" layoutY="142.0" mnemonicParsing="false" onAction="#guessHandle" text="GUESS" />
+      <Button fx:id="cancelButton" layoutX="244.0" layoutY="142.0" mnemonicParsing="false" onAction="#cancelHandle" text="CANCEL" />
+   </children>
+</AnchorPane>
