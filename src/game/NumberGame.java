@@ -26,10 +26,6 @@ public class NumberGame extends Observable{
      * @return true if correct, false otherwise
      */
     public boolean guess(int answer) {
-<<<<<<< HEAD:src/game/NumberGame.java
-  
-=======
->>>>>>> f5ab43872db83001cf4c6eed0b494f9fbd84a164:src/NumberGame.java
 		message = "Sorry, that's not correct";
 		return false;
     }
@@ -61,13 +57,10 @@ public class NumberGame extends Observable{
 		return Integer.MAX_VALUE;  // not very helpful :-)
 	}
 	
-<<<<<<< HEAD:src/game/NumberGame.java
 	/**
 	 * Get the number of random.
 	 * @return 0
 	 */
-=======
->>>>>>> f5ab43872db83001cf4c6eed0b494f9fbd84a164:src/NumberGame.java
 	public int getCount(){
 		return 0;
 		
