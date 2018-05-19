@@ -11,7 +11,7 @@ public class Main {
 		// upper limit for secret number in guessing game
 		int upperBound = 100;
 		NumberGame game = new NoppawanGame(upperBound);
-		GameSolver ui = new GameSolver( );
+		GameConsole ui = new GameConsole( );
 		int solution = ui.play( game );
 		System.out.println(game.getMessage());
 		System.out.println("Counted " + game.getCount() + " times");
